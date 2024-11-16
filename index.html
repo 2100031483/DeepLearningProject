@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gesture Identification Using Deep Learning Techniques</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url(""); /* Replace with your chosen background image */
+            background-color: #00FFFF;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background-color: rgba(255, 255, 255, 0.8); /* Adding a semi-transparent white background to the container */
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            max-width: 600px;
+            width: 100%;
+        }
+
+        h1 {
+            margin-bottom: 2rem;
+            color: #333;
+        }
+
+        .error {
+            color: red;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        h4 {
+            margin-bottom: 0.5rem;
+            color: #555;
+        }
+
+        input[type="file"] {
+            width: 100%;
+            padding: 0.5rem;
+            margin-bottom: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            background-color: #f9f9f9;
+            box-sizing: border-box;
+        }
+
+        input[type="radio"] {
+            margin-right: 0.5rem;
+        }
+
+        .model-options {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-bottom: 1rem;
+        }
+
+        .model-options label {
+            display: inline-block;
+            margin: 0.5rem;
+            cursor: pointer;
+        }
+
+        button[type="submit"] {
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            padding: 1rem 2rem;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin-top: 1rem;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #45A049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Gesture Identification Using Deep Learning Techniques</h1>
+
+        <form action="/predict" method="post" enctype="multipart/form-data">
+            <h4>Choose a Gesture Image:</h4>
+            <input type="file" name="file" accept=".jpg, .jpeg, .png" required>
+            <h4>Choose a Model:</h4>
+            <div class="model-options">
+                <label><input type="radio" name="options" value="ann.h5" checked>Binary Classification with Sequential Model</label>
+                <label><input type="radio" name="options" value="optimization-tech.h5">Optimization Techniques</label>
+                <label><input type="radio" name="options" value="comp.h5">Comparison Model</label>
+                <label><input type="radio" name="options" value="multiple-classes.h5">Multiple Classes</label>
+                <label><input type="radio" name="options" value="mini.h5">Mini Batch</label>
+                <label><input type="radio" name="options" value="cnn_model.h5">CNN</label>
+                <label><input type="radio" name="options" value="cnn_add_regularize.h5">CNN Regularization</label>
+                <label><input type="radio" name="options" value="cnn_vgg.h5">VGG</label>
+                <label><input type="radio" name="options" value="rnn.h5">RNN</label>
+                <label><input type="radio" name="options" value="LSTM_model.h5">LSTM</label>
+                <label><input type="radio" name="options" value="LSTM_autoencoder.h5">Auto Encoder</label>
+                <label><input type="radio" name="options" value="autoencoder_saved.h5">Denoise Auto Encoder</label>
+                <label><input type="radio" name="options" value="autoencoder_saved.h5">Denoise Auto Encoder</label>
+                <label><input type="radio" name="options" value="model_auto_resnet.h5">Denoise Auto Encoder</label>
+            </div>
+            <button type="submit">Predict</button>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Identifying the Gesture Image By Using the Selected Model</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+           <p style="background-image: url("");">
+            background-color: #00FFFF;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 2rem;
+            max-width: 600px;
+            width: 100%;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 1rem;
+            color: #333;
+        }
+
+        .analysis-result {
+            border: 2px solid #3498db;
+            padding: 1rem;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+            background-color: #f9f9f9;
+        }
+
+        .analysis-result p {
+            margin-bottom: 0.5rem;
+            color: #333;
+        }
+
+        .confidence {
+            font-weight: bold;
+            color: #27ae60;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Identifying the Gesture Image By Using the Selected Model</h1>
+        <div class="analysis-result">
+            <p>Selected Model: {{ model_name }} </p>
+            <p>Predicted class: {{ predicted_class }} ({{ predicted_label }})</p>
+            <p class="confidence">Accuracy: {{ confidence|round(2)*100 }}%</p>
+        </div>
+    </div>
+</body>
+</html>
